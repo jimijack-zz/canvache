@@ -11,10 +11,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151102174413) do
+ActiveRecord::Schema.define(version: 20151102203031) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "events", force: :cascade do |t|
+    t.string   "gallery"
+    t.string   "artist_name"
+    t.string   "artist_genre"
+    t.string   "artis_web"
+    t.string   "date_open"
+    t.string   "date_close"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "galleries", force: :cascade do |t|
+    t.string   "name"
+    t.string   "street_address"
+    t.string   "city"
+    t.string   "state"
+    t.string   "website"
+    t.string   "genres"
+    t.string   "days_open"
+    t.string   "hours_open"
+    t.string   "img_uri"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
