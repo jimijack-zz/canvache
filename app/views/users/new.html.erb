@@ -2,7 +2,7 @@
 <%= form_for @user do |f| %>
   <% if @user.errors.any? %>
     <div class="error_messages">
-      <h2>Form is invalid</h2>
+      <h2>Need more info to get you set up!</h2>
       <ul>
         <% for message in @user.errors.full_messages %>
           <li><%= message %></li>
@@ -30,5 +30,5 @@
     <%= f.check_box :gallery_rep %>
     <%= f.label :gallery_rep, "I am a Gallery Representative" %>
   </div>
-  <div class="actions"><%= f.submit %></div>
+  <div class="actions"><%= f.submit "Sign me up!" %></div>
 <% end %>
