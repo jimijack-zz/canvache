@@ -1,8 +1,8 @@
 class User < ActiveRecord::Base
   has_secure_password
   has_many :galleries
-  validates :name, presence: true, uniqueness: true
+  validates :name, presence: true
   validates :email, presence: true, uniqueness: true
   validates :password, presence: true, length: { in: 6..20}
-  validates :zip_code, presence: true, uniqueness: true
+  validates :zip_code, presence: true
 end
