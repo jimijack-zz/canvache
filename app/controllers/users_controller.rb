@@ -10,6 +10,9 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    if @user.id = nil
+      redirect_to root_path, notice: "You have to sign in!"
+    end
   end
 
   def create
