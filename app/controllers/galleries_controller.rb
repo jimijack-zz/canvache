@@ -4,4 +4,6 @@ class GalleriesController < ApplicationController
     @gallery = Gallery.new
   end
 
+  #users.gallery.create
+
 end
