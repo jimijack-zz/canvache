@@ -6,4 +6,6 @@ class GalleriesController < ApplicationController
 
   #users.gallery.create
 
+
+
 end
