@@ -19,12 +19,16 @@
     <%= f.text_field :email %>
   </div>
   <div class="field">
-    <%= f.label :password %>
+    <%= f.label :password, "Password (6-20 characters)" %>
     <%= f.password_field :password %>
   </div>
   <div class="field">
     <%= f.label :password_confirmation %>
     <%= f.password_field :password_confirmation %>
+  </div>
+  <div class="field">
+    <%= f.label :zip_code, "Primary Area (Zip-Code)" %>
+    <%= f.text_field :zip_code %>
   </div>
   <div class="field">
     <%= f.check_box :gallery_rep %>

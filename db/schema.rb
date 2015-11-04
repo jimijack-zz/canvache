@@ -46,6 +46,7 @@ ActiveRecord::Schema.define(version: 20151102203031) do
     t.string   "email"
     t.string   "password_digest"
     t.boolean  "gallery_rep"
+    t.string   "zip_code"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
