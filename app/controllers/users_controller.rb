@@ -1,7 +1,13 @@
 class UsersController < ApplicationController
 
+  before_action :authorize, only: [:home]
+
   def profile
 
+  end
+
+  def home
+      @galleries = current_user.galleries
   end
 
   def new
@@ -22,8 +28,7 @@ class UsersController < ApplicationController
       if params["user"]["gallery_rep"] == "1"
         redirect_to new_galleries_path
       else
-        redirect_to users_path(@user.id)
-        flash[:notice] = "You have successfully signed up!"
+        redirect_to '/home'
       end
     else
       render :new

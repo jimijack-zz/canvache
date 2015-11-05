@@ -50,6 +50,7 @@
     <%= f.label :img_uri, "Profile Image URI" %>
     <%= f.text_field :img_uri %>
   </div>
-  <div class="actions"><%= f.submit "Submit Profile!" %></div>
+  <div class="actions"><%= f.submit "Submit Home Page Profile!" %></div>
 <% end %>
+
 
