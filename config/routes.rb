@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   get '/logout', to: 'sessions#destroy'
 
   get '/home', to: 'users#home'
+  get '/galleries/profile', to: 'galleries#show'
 end

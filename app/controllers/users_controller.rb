@@ -26,7 +26,7 @@ class UsersController < ApplicationController
     if @user.save
       session[:user_id] = @user.id
       if params["user"]["gallery_rep"] == "1"
-        redirect_to new_galleries_path
+        redirect_to new_gallery_path
       else
         redirect_to '/home'
       end

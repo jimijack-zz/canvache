@@ -22,7 +22,22 @@
 
 
 body {
+  background-image: url(http://pcwallart.com/images/full-moon-stars-clouds-wallpaper-3.jpg);
   padding-top: 60px;
+}
+
+#forms {
+  background-color: #D8D8D8;
+  border-radius: 20px;
+}
+
+#profile {
+  background-image: url(https://i.imgur.com/AysQ3bV.jpg);
+  border-radius: 20px;
+}
+
+.control-label {
+  color: gray;
 }
 
 .container {

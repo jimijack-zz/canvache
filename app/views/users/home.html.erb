@@ -25,8 +25,8 @@
         <header class="jumbotron hero-spacer" style="background-image:url(http://www.chrisspagani.com/abstract/bw-3.jpg)">
             <h1>Welcome <%= current_user.name %></h1>
             <% if rep %>
-              <p>Select and Event below to edit or Click to add a new Gallery.</p>
-              <p><a class="btn btn-primary btn-large" href="/galleries/new">Add a Gallery</a>
+              <p>Select and Event below to edit or Click to go to your Gallery Profile.</p>
+              <p><a class="btn btn-primary btn-large" href="/galleries/profile">Gallery Profile</a>
               </p>
             <% else %>
               <p>Take a look at what's going on in your area!</p>
@@ -58,6 +58,22 @@
                     </div>
                 </div>
             </div>
+
+            <!-- OR
+            <div class="col-sm-2 col-md-2">
+              <img src="http://thetransformedmale.files.wordpress.com/2011/06/bruce-wayne-armani.jpg"
+              alt="" class="img-rounded img-responsive" />
+            </div>
+            <div class="col-sm-4 col-md-4">
+              <blockquote>
+                <p>Bruce Wayne</p> <small><cite title="Source Title">Gotham, United Kingdom  <i class="glyphicon glyphicon-map-marker"></i></cite></small>
+              </blockquote>
+              <p> <i class="glyphicon glyphicon-envelope"></i> masterwayne@batman.com
+                <br
+                /> <i class="glyphicon glyphicon-globe"></i> www.bootsnipp.com
+                <br /> <i class="glyphicon glyphicon-gift"></i> January 30, 1974</p>
+            </div> -->
+
 
             <div class="col-md-3 col-sm-6 hero-feature">
                 <div class="thumbnail">
