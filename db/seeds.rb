@@ -8,7 +8,7 @@
 
 # clean out all current data
 User.destroy_all
-Line.destroy_all
+Gallery.destroy_all
 
 u1 = User.create(
   name: "User Dash One",
