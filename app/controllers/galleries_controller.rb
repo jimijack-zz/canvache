@@ -12,8 +12,9 @@ class GalleriesController < ApplicationController
 
   def create
     @gallery = Gallery.new(gallery_params)
+    @gallery.user = current_user
     if @gallery.save
-      redirect_to '/home'
+      render 'users/home'
     else
       render :new
     end

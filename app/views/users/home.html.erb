@@ -9,7 +9,7 @@
             <% if rep %>
               <p id="homeHeader">Select an Event below to edit or Click to go to your Gallery Profile.</p>
               <p>
-              <%= link_to "Gallery Profile", gallery_path(current_user.gallery), class: "btn btn-primary btn-large" %>
+              <%= link_to "Gallery Profile", gallery_path(@gallery), class: "btn btn-primary btn-large" %>
               </p>
             <% else %>
               <p>Take a look at what's going on in your area!</p>
