@@ -120,3 +120,25 @@ g4 = Gallery.create(
   user_id: 6,
 )
 
+r5 = User.create(
+  name: "Rep Dash Five",
+  email: "r5@email.com",
+  password: "abc123",
+  password_confirmation: "abc123",
+  gallery_rep: true,
+  zip_code: "90011",
+)
+
+g5 = Gallery.create(
+  name: "Whadidoo Artist Zoo",
+  street_address: "213 Cedar Dr.",
+  city: "Los Angeles",
+  state: "CA",
+  website: "http://www.whadidoozoo.org",
+  genres: "Animal Art",
+  days_open: "Saturday & Sunday",
+  hours_open: "12:00pm - 7:00pm",
+  img_uri: "http://cdn.trendhunterstatic.com/thumbs/painted-animals-trends-to-dye-for.jpeg",
+  zip_code: "90011",
+  user_id: 7,
+)
