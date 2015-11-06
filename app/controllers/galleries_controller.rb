@@ -2,10 +2,11 @@ class GalleriesController < ApplicationController
 
   def new
     @gallery = Gallery.new
+    @gallery.user = current_user_id
   end
 
   def show
-
+    @gallery = current_user.gallery
   end
 
 

@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   end
 
   def home
-      @galleries = current_user.galleries
+      @gallery = current_user.gallery
   end
 
   def new

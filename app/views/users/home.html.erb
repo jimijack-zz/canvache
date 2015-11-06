@@ -2,11 +2,7 @@
 
 
 
-<% if rep %>
-  You are a rep with <%= @galleries.count %> galleries.
-<% else %>
-  You are a not a rep and are following <%= @galleries.count %> galleries.
-<% end %>
+
 
 <% if rep %>
 
@@ -15,7 +11,7 @@
 <% end %>
 
 
-
+<% if rep %>
     <!-- Page Content -->
     <div id="homePage">
       <div class="container">
@@ -25,7 +21,8 @@
             <h1 id="homeHeader">Welcome <%= current_user.name %></h1>
             <% if rep %>
               <p id="homeHeader">Select an Event below to edit or Click to go to your Gallery Profile.</p>
-              <p><a class="btn btn-primary btn-large" href="/galleries/profile">Gallery Profile</a>
+              <p>
+              <%= link_to "Gallery Profile", gallery_path(current_user.gallery), class: "btn btn-primary btn-large" %>
               </p>
             <% else %>
               <p>Take a look at what's going on in your area!</p>
@@ -117,6 +114,102 @@
 
         <hr>
 
+        <% else %>
+          You are a not a rep and are following <%= @galleries.count %> galleries.
+
+        <header class="jumbotron hero-spacer" style="background-image:url(http://www.chrisspagani.com/abstract/bw-3.jpg)">
+            <h1 id="homeHeader">Welcome <%= current_user.name %></h1>
+              <p id="homeHeader">Select a Gallery or Even to below to view details!</p>
+              <!--<p><a class="btn btn-primary btn-large" href="/galleries/profile">Gallery Profile</a>
+              </p>-->
+              <p>Take a look at what's going on in your area!</p>
+        </header>
+
+        <hr>
+
+        <!-- Title -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h3 id="features">Featured Galleries</h3>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Page Features -->
+        <div class="row text-center">
+
+            <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                    <img src= "http://susancorso.com/seedsforsanctuary/wp-content/uploads/2013/04/box_placeholder.jpg" alt="">
+                    <div class="caption">
+                        <h3><%#= Gallery[0].name %></h3>
+                        <p>Basic info for that gallery.</p>
+                        <p>
+                            <a href="#" class="btn btn-primary">Gallery Profile</a> <a href="#" class="btn btn-default">Event Info</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- OR
+            <div class="col-sm-2 col-md-2">
+              <img src="http://thetransformedmale.files.wordpress.com/2011/06/bruce-wayne-armani.jpg"
+              alt="" class="img-rounded img-responsive" />
+            </div>
+            <div class="col-sm-4 col-md-4">
+              <blockquote>
+                <p>Bruce Wayne</p> <small><cite title="Source Title">Gotham, United Kingdom  <i class="glyphicon glyphicon-map-marker"></i></cite></small>
+              </blockquote>
+              <p> <i class="glyphicon glyphicon-envelope"></i> masterwayne@batman.com
+                <br
+                /> <i class="glyphicon glyphicon-globe"></i> www.bootsnipp.com
+                <br /> <i class="glyphicon glyphicon-gift"></i> January 30, 1974</p>
+            </div> -->
+
+
+            <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                    <img src="http://susancorso.com/seedsforsanctuary/wp-content/uploads/2013/04/box_placeholder.jpg" alt="">
+                    <div class="caption">
+                        <h3><%#= Gallery[0].name %></h3>
+                        <p>Basic info for that gallery.</p>
+                        <p>
+                            <a href="#" class="btn btn-primary">Gallery Profile</a> <a href="#" class="btn btn-default">Event Info</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                    <img src="http://susancorso.com/seedsforsanctuary/wp-content/uploads/2013/04/box_placeholder.jpg" alt="">
+                    <div class="caption">
+                        <h3><%#= Gallery[0].name %></h3>
+                        <p>Basic info for that gallery.</p>
+                        <p>
+                            <a href="#" class="btn btn-primary">Gallery Profile</a> <a href="#" class="btn btn-default">Event Info</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                    <img src="http://susancorso.com/seedsforsanctuary/wp-content/uploads/2013/04/box_placeholder.jpg" alt="">
+                    <div class="caption">
+                        <h3><%#= Gallery[0].name %></h3>
+                        <p>Basic info for that gallery.</p>
+                        <p>
+                            <a href="#" class="btn btn-primary">Gallery Profile</a> <a href="#" class="btn btn-default">Event Info</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <% end %>
+
         <!-- Footer -->
         <footer>
             <div class="row">
@@ -125,9 +218,10 @@
                 </div>
             </div>
         </footer>
-
       </div>
     </div>
+
+
 
 
 
