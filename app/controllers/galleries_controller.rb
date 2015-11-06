@@ -2,7 +2,7 @@ class GalleriesController < ApplicationController
 
   def new
     @gallery = Gallery.new
-    @gallery.user = current_user_id
+    @gallery.rep = current_user
   end
 
   def show
