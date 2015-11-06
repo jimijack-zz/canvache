@@ -51,7 +51,8 @@ Ultimately the goal is for it to be a faster way to connect artists and gallerie
 ##ICEBOX
 * Threads will be upcoming shows with dates, artist, beginning and closing reception dates, link to artist page
 * Search by general location (zip code) to find galleries in particular area and see what upcoming events are in qeue
-
-
+* Users can log in to the site to explore gallery pages and favorite their potential gallery follows.
+* If a user searches by location, there should be an algorithm that will narrow location addresses for openings that are available within a 10miles radius of users location (if user location is x then list galleries within 10 miles of x. Use zipcode to narrow.
+* Gallery profile view will have photo, location with contact info, upcoming event tallies (integer for how many events at the time).
 
 
